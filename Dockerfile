@@ -27,4 +27,3 @@ COPY ./tt_api /app
 # to be equal to the cores available.
 # Timeout is set to 0 to disable the timeouts of the workers to allow Cloud Run to handle instance scaling.
 CMD exec gunicorn --bind 0.0.0.0:8000 --workers 1 --threads 8 --worker-class=gthread --timeout 0 src.app:app
-EXPOSE 8000
